@@ -40,7 +40,7 @@ export default class TodoList extends Component {
       return (
         <View>
           <ScrollView>
-            <CheckBox title={t.name + "," + t.dueDate.getDate()+"-"+(t.dueDate.getMonth()+1)+"-"+t.dueDate.getFullYear()} 
+            <CheckBox title={"Task to do: "+t.name + " Created date" + t.dueDate.getDate()+"-"+(t.dueDate.getMonth()+1)+"-"+t.dueDate.getFullYear()+ " Duedate: "+ t.date} 
             checked={t.checked} 
             onPress = {() => this.checkBox_Test(index)}
             />
@@ -54,6 +54,7 @@ export default class TodoList extends Component {
       )
     })
   }
+  
   render() {
     return (
       <SafeAreaView style={styles.container}>
